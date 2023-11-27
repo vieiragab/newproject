@@ -1,0 +1,51 @@
+.menu {
+    position: fixed;
+    top: 5px;
+    left: 0;
+    width: 98.5%;
+    background-color: #0766AD;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    display: inline-block;
+}
+
+.menu button {
+    background: none;
+    border: none;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+    color: white;
+    font-family: "poppins-bold", Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.menu button:active {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu ul li:hover {
+    background-color: rgb(238, 238, 238);
+    border: black;
+
+}
+
+.contentBelowMenu {
+    padding-top: 60px;
+}
+
+.menudireita {
+    float: right;
+}

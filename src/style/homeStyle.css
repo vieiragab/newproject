@@ -1,0 +1,141 @@
+.board {
+    font-family: "poppins-bold", Helvetica, sans-serif;
+    background-color: #0766AD;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 700px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.estruturaimg{
+    width: 45vw;
+    height: 55vh;
+    margin: 5em;
+    max-width: 440px;
+    max-height: 300px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    margin-top: 350px;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 10 100px black;
+}
+
+.estrutura{
+    height: 300px;
+    position: absolute;
+    opacity: 0;
+    animation-name: animacao;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animacao{
+    25%{
+        opacity: 1;
+        transform:scale(1.1,1.1);
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+.estrutura:nth-child(1){
+    animation-delay: 0s;
+}
+.estrutura:nth-child(2){
+    animation-delay: 4s;
+}
+.estrutura:nth-child(3){
+    animation-delay: 8s;
+}
+
+.content {
+  display: flex;
+
+}
+
+.slide {
+  flex: 1;
+}
+
+.link {
+    width: 500px;
+    height: 200px;
+    margin-right: auto;
+    margin-top: 400px;
+    border-radius: 8px;
+    color: #0766AD;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    max-height: 200px;
+    text-align: right;
+    padding: 20px;
+
+}
+
+.link button {
+    border-radius: 8px;
+    border: none;
+    background-color: #0766AD;
+    color: whitesmoke;
+    font-family: "poppins-bold", Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.jornal {
+    padding: 30px;
+    text-align: center;
+    font-family: "poppins-bold", Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.jornal button {
+    border-radius: 8px;
+    border: none;
+    background-color: #0766AD;
+    color: whitesmoke;
+    font-family: "poppins-bold", Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.posts {
+  display: flex;
+  justify-content: center;
+  padding: 200px;
+  border-radius: 8px;
+
+}
+
+.posts h2 {
+  margin: 30px;
+  
+}
+
+.posts button {
+  margin: 30px;
+  
+}
+
+.post {
+    border-radius: 8px;
+    border: none;
+    border: 2px solid transparent; /* Define uma borda sólida e transparente */
+    border-color: #0766AD;
+    margin: 20px;
+ 
+}
+
