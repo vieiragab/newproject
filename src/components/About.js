@@ -1,10 +1,31 @@
 import React from 'react';
+import aboutus from '../img/aboutus.png';
+import fundoabout from '../img/fundoabout.png';
+import '../style/aboutStyle.css';
 
-const About = () => {
+
+
+function About () {
   return (
     <div id="about">
-      <h2>Sobre nós</h2>
-      {/* Conteúdo da seção About */}
+      <div className='espaco'>
+      <div className='divisao'>
+        <section>
+          <div className="estruturadivisao">
+            <img className="estruturadois" src={aboutus} alt="Sobre nos"/>
+          </div>
+        </section>
+      </div>
+
+      
+      <div className='texto'>
+        <h2 className='abouth2'>Sobre nós</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing</p>
+      </div>
+
+      </div>
+      <img className="fundoab" src={fundoabout} alt="Sobre nos"/>
+
     </div>
   );
 }
