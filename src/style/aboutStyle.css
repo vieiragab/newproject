@@ -1,0 +1,55 @@
+.estruturadivisao{
+    width: 45vw;
+    height: 55vh;
+    margin: 5em;
+    max-width: 440px;
+    max-height: 300px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 10 100px black;
+}
+
+.estruturadois{
+    height: 300px;
+    position: absolute;
+
+}
+.espaco {
+    display: flex;
+  
+}
+
+.texto {
+    width: 500px;
+    height: 200px;
+    margin-right: 50px;
+    margin-top: 100px;
+    border-radius: 8px;
+    color: #0766AD;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    max-height: 200px;
+    text-align: right;
+    padding: 30px;
+
+}
+
+.texto button {
+    border-radius: 8px;
+    border: none;
+    background-color: #0766AD;
+    color: whitesmoke;
+    font-family: "poppins-bold", Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.fundoab {
+    width: 100%;
+
+}

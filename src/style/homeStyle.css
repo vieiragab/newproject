@@ -69,8 +69,8 @@
 .link {
     width: 500px;
     height: 200px;
-    margin-right: auto;
-    margin-top: 400px;
+    margin-right: 50px;
+    margin-top: 370px;
     border-radius: 8px;
     color: #0766AD;
     font-weight: bold;
@@ -78,7 +78,7 @@
     max-width: 500px;
     max-height: 200px;
     text-align: right;
-    padding: 20px;
+    padding: 30px;
 
 }
 
