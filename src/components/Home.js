@@ -4,6 +4,7 @@ import casoum from '../img/casoum.png';
 import caso2 from '../img/caso2.png';
 import caso3 from '../img/caso3.png';
 import jornal from '../img/jornal.png';
+import { Link } from 'react-router-dom';
 
 
 function Home () {
@@ -33,7 +34,7 @@ function Home () {
       <div className='link'>
         <h2>Como acontece o vício em apostas?</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing</p>
-        <button>Saiba mais</button>
+        <Link to="/vicio">Saiba mais</Link>
       </div>
 
       </div>

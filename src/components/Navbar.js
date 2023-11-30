@@ -1,33 +1,8 @@
-import React, { useState } from 'react';
-import About from './About';
-import Contact from './Contact';
-import Home from './Home';
-import Vicio from './Vicio';
+import React from 'react';
 import '../style/navStyle.css';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
-  const [currentComponent, setCurrentComponent] = useState('home');
-
-  const handleNavigation = (component) => {
-    setCurrentComponent(component);
-  };
-
-  let componentToRender;
-
-  switch (currentComponent) {
-    case 'about':
-      componentToRender = <About />;
-      break;
-    case 'contact':
-      componentToRender = <Contact />;
-      break;
-    case 'vicio':
-      componentToRender = <Vicio />;
-      break;
-    default:
-      componentToRender = <Home />;
-      break;
-  }
 
   return (
     <div className='fora'>
@@ -35,22 +10,19 @@ function Navbar() {
         <nav>
           <ul>
             <li>
-              <button onClick={() => handleNavigation('home')}>Home</button>
+              <Link className='linkc' to="/">Home</Link>
             </li>
             <li>
-              <button onClick={() => handleNavigation('about')}>Sobre nós</button>
+              <Link className='linkc' to="/about">Sobre nós</Link>
             </li>
             <li>
-              <button onClick={() => handleNavigation('vicio')}>Vicio em Apostas</button>
+              <Link className='linkc' to="/vicio">Vicio em Apostas</Link>
             </li>
             <li className='menudireita'>
-              <button onClick={() => handleNavigation('contact')}>Contato</button>
+              <Link className='linkc' to="/contact">Contato</Link>
             </li>
           </ul>
         </nav>
-      </div>
-      <div className="contentBelowMenu">
-        {componentToRender}
       </div>
     </div>
   );
