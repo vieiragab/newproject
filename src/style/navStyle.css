@@ -20,7 +20,7 @@
     display: inline-block;
 }
 
-.menu button {
+.menu .linkc {
     background: none;
     border: none;
     border-radius: 5px;
@@ -30,9 +30,10 @@
     font-size: 12px;
     padding: 1em;
     cursor: pointer;
+    text-decoration: none;
 }
 
-.menu button:active {
+.menu .linkc:active {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
