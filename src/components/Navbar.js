@@ -18,6 +18,9 @@ function Navbar() {
             <li>
               <Link className='linkc' to="/vicio">Vicio em Apostas</Link>
             </li>
+            <li>
+              <Link className='linkc' to="/criar">Criar post</Link>
+            </li>
             <li className='menudireita'>
               <Link className='linkc' to="/contact">Contato</Link>
             </li>
