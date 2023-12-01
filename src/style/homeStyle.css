@@ -113,7 +113,6 @@
 }
 
 .posts {
-  display: flex;
   justify-content: center;
   padding: 200px;
   border-radius: 8px;
