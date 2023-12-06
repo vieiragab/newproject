@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import '../style/criarStyle.css';
+import { Link } from 'react-router-dom';
+
 
 function Criar() {
     const [titulo, setTitulo] = useState("");
@@ -43,13 +45,16 @@ function Criar() {
     return (
         <div className='formulario-container'>
             <div id="criar" className='formu'>
-                <label>Titulo
-                    <input type='text' value={titulo} onChange={handleTituloChange} />
+                <label>
+                    <p>Título</p>
+                    <input type='text' value={titulo} onChange={handleTituloChange}/>
                 </label>
-                <label>Subtitulo
-                    <input type='text' value={subtitulo} onChange={handleSubtituloChange} />
+                <label>
+                    <p>Subtítulo</p>
+                    <input type='text' value={subtitulo} onChange={handleSubtituloChange}/>
                 </label>
-                <label>Conteúdo
+                <label>
+                    <p>Conteúdo</p>
                     <ReactQuill
                         theme="snow"
                         value={conteudo}
@@ -57,12 +62,15 @@ function Criar() {
                         modules={modules}
                     />
                 </label>
-                <label>Data postagem
-                    <input type='date' value={data} onChange={handleDataChange} />
+                <label>
+                    <p>Data postagem</p>
+                    <input type='date' value={data} onChange={handleDataChange}/>
                 </label>
-                <label>Autor
-                    <input type='text' value={autor} onChange={handleAutorChange} />
+                <label>
+                    <p>Autor</p>
+                    <input type='text' value={autor} onChange={handleAutorChange}/>
                 </label>
+                <Link to="">Criar postagem</Link>
             </div>
         </div>
     );

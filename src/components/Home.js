@@ -1,14 +1,38 @@
-import React from 'react';
-import '../style/homeStyle.css';
-import casoum from '../img/casoum.png';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import caso2 from '../img/caso2.png';
 import caso3 from '../img/caso3.png';
+import casoum from '../img/casoum.png';
 import jornal from '../img/jornal.png';
-import { Link } from 'react-router-dom';
+import '../style/homeStyle.css';
+import Card from './Card';
 
 
 function Home () {
-
+  const [ posts, setPosts ] = useState([{
+  titulo: "Post 1",
+  subtitulo: "Subtitulo 1",
+  conteudo: "Conteudo",
+  data: "04/12",
+  autor: "Tanana"},
+{
+  titulo: "Post 2",
+  subtitulo: "Subtitulo 1",
+  conteudo: "Conteudo",
+  data: "04/12",
+  autor: "Tanana"},
+{
+  titulo: "Post 3",
+  subtitulo: "Subtitulo 1",
+  conteudo: "Conteudo",
+  data: "04/12",
+  autor: "Tanana"},
+{
+  titulo: "Post 4",
+  subtitulo: "Subtitulo 1",
+  conteudo: "Conteudo",
+  data: "04/12",
+  autor: "Tanana"}]);
 
   return (
     <div id="home">
@@ -47,28 +71,7 @@ function Home () {
           </a>
 
       <div className='posts'>
-        <div className='post'>
-          <p>Post 1</p>
-          <a href='https://www.metropoles.com/saude/vicio-aposta-esportivas-riscos' target="_blank">
-          <button>Saiba mais</button>
-          </a>
-        </div>
-        <div className='post'>
-          <p>Post 2</p>
-          <button>Saiba mais</button>
-        </div>
-        <div className='post'>
-          <p>Post 3</p>
-          <button>Saiba mais</button>
-        </div>
-        <div className='post'>
-          <p>Post 4</p>
-          <button>Saiba mais</button>
-        </div>
-        <div className='post'>
-          <p>Post 5</p>
-          <button>Saiba mais</button>
-        </div>
+        {posts.map(post => <Card post={post} key={post.nome}/> )}
       </div>
 
       </div>
