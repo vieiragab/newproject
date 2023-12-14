@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import '../style/criarStyle.css';
-import { Link } from 'react-router-dom';
 
 
-function Criar() {
+function Criar({setPosts, posts}) {
     const [titulo, setTitulo] = useState("");
     const [subtitulo, setSubtitulo] = useState("");
     const [conteudo, setConteudo] = useState("");
@@ -34,12 +33,17 @@ function Criar() {
 
     const modules = {
         toolbar: [
-            [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+            [{ 'header': [1, 2, 3, 4, 5, 6, true] }],
             ['bold', 'italic', 'underline', 'strike'],
             ['link', 'image', 'video'],
             [{ 'list': 'ordered'}, { 'list': 'bullet' }],
             ['clean']
         ]
+    };
+
+    const SalvarPost = () => {
+        setPosts([... posts,{titulo, subtitulo, conteudo, data, autor}])
+        console.log({titulo, subtitulo, conteudo, data, autor})
     };
 
     return (
@@ -70,7 +74,7 @@ function Criar() {
                     <p>Autor</p>
                     <input type='text' value={autor} onChange={handleAutorChange}/>
                 </label>
-                <Link to="">Criar postagem</Link>
+                <button onClick={SalvarPost}>Criar postagem</button>
             </div>
         </div>
     );

@@ -1,13 +1,17 @@
+import { Link } from "react-router-dom";
+import '../style/cardStyle.css';
 
 
-function Card (props) {
+
+function Card ({post}) {
 
     return(
         <div className='post'>
-        <p>{props?.post?.titulo}</p>
-        <a href='https://www.metropoles.com/saude/vicio-aposta-esportivas-riscos' target="_blank">
-        <button>Saiba mais</button>
-        </a>
+        <p>{post?.titulo}</p>
+        <p>{post?.subtitulo}</p>
+        <button>  
+        <Link to={`/${post.titulo}`}>Saiba mais</Link>
+        </button>
       </div>
     )
 }

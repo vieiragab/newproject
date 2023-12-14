@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import caso2 from '../img/caso2.png';
 import caso3 from '../img/caso3.png';
@@ -8,31 +8,7 @@ import '../style/homeStyle.css';
 import Card from './Card';
 
 
-function Home () {
-  const [ posts, setPosts ] = useState([{
-  titulo: "Post 1",
-  subtitulo: "Subtitulo 1",
-  conteudo: "Conteudo",
-  data: "04/12",
-  autor: "Tanana"},
-{
-  titulo: "Post 2",
-  subtitulo: "Subtitulo 1",
-  conteudo: "Conteudo",
-  data: "04/12",
-  autor: "Tanana"},
-{
-  titulo: "Post 3",
-  subtitulo: "Subtitulo 1",
-  conteudo: "Conteudo",
-  data: "04/12",
-  autor: "Tanana"},
-{
-  titulo: "Post 4",
-  subtitulo: "Subtitulo 1",
-  conteudo: "Conteudo",
-  data: "04/12",
-  autor: "Tanana"}]);
+function Home ({posts}) {
 
   return (
     <div id="home">
@@ -58,7 +34,9 @@ function Home () {
       <div className='link'>
         <h2>Como acontece o vício em apostas?</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing</p>
+        <button> 
         <Link to="/vicio">Saiba mais</Link>
+        </button>
       </div>
 
       </div>
@@ -71,7 +49,7 @@ function Home () {
           </a>
 
       <div className='posts'>
-        {posts.map(post => <Card post={post} key={post.nome}/> )}
+        {posts.map(post => <Card post={post} key={post.titulo}/> )}
       </div>
 
       </div>
