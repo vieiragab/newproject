@@ -1,9 +1,8 @@
 import ReactHtmlParser from 'html-react-parser';
 
+function Post({ post }) {
 
-function Post ({post}) {
-
-    return(
+    return (
         <div>
             <p>{post?.titulo}</p>
             <p>{post?.subtitulo}</p>

@@ -16,7 +16,19 @@ function Navbar() {
               <Link className='linkc' to="/about">Sobre nós</Link>
             </li>
             <li>
-              <Link className='linkc' to="/vicio">Vicio em Apostas</Link>
+              <Link className='linkc' to="/bets">Sobre apostar</Link>
+              <ul>
+	                  <li><a href="/bets/oquesao">O que são apostas?</a></li>
+	                  <li><a href="#">Fatos</a></li>
+	                  <li><a href="#">Vocabulário</a></li>
+                    <li><a href="#">Perguntas frequentes</a></li>
+	       		  </ul>
+            </li>
+            <li>
+              <Link className='linkc' to="/vicio">Apostas Responsáveis</Link>
+            </li>
+            <li>
+              <Link className='linkc' to="/ajuda">Ajuda</Link>
             </li>
             <li>
               <Link className='linkc' to="/criar">Criar post</Link>
@@ -30,5 +42,6 @@ function Navbar() {
     </div>
   );
 }
+
 
 export default Navbar;
