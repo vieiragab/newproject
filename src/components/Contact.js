@@ -1,37 +1,92 @@
+import axios from 'axios';
 import React, { useState } from 'react';
-import '../style/contatoStyle.css'
+import 'react-quill/dist/quill.snow.css';
+import '../style/criarStyle.css';
+
+
+
+const api = axios.create({
+  baseURL: "https://bet-responsavel-default-rtdb.europe-west1.firebasedatabase.app/"
+});
+
+
 
 const Contact = () => {
-  const [email, setEmail] = useState('');
-  const [nome, setNome] = useState('');
-  const [telefone, setTelefone] = useState('');
-  const [cep, setCep] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Dados do formulário:', { email, nome, telefone, cep });
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [telefone, setTelefone] = useState("");
+  const [data, setData] = useState("");
+  const [filtro, setFiltro] = useState("");
+  const [id, setId] = useState(null);
+
+  
+  const limparCampos = () => {
+    setNome("");
+    setEmail("");
+    setTelefone("");
+    setData("");
+    setId(null);
+  }
+  
+  const salvar = () => {
+    const obj = { nome, email, telefone, data };
+    if (id) {
+      api.put("/contact/" + id + ".json", obj)
+      .then(() => {
+        limparCampos();
+      })
+    } else {
+      api.post("/contact.json", obj)
+      .then(() => {
+        limparCampos();
+      })
+    }
+  }
+  
+  const handleNomeChange = (event) => {
+    setNome(event.target.value);
   };
-
+  
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+  
+  const handleTelefoneChange = (event) => {
+    setTelefone(event.target.value);
+  };
+  
+  const handleDataChange = (event) => {
+    setData(event.target.value);
+  };
+  
+  
   return (
-    <div className='formul'>
-      <form onSubmit={handleSubmit}>
-        <label>Email:
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        </label>
-        <label>Nome:
-          <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} required />
-        </label>
-        <label>Telefone:
-          <input type="tel" value={telefone} onChange={(e) => setTelefone(e.target.value)} required />
-        </label>
-        <label>CEP:
-          <input type="text" value={cep} onChange={(e) => setCep(e.target.value)} maxLength="8" minLength="8" pattern="[0-9]*" title="Digite apenas números" required />
-        </label>
-        <button type="submit">Enviar</button>
-      </form>
-
+    <div className='formulario-container'>
+    <div id="criar" className='formu'>
+      <label>
+        <p>Nome</p>
+        <input type='text' value={nome} onChange={handleNomeChange} />
+      </label>
+      <label>
+        <p>E-mail</p>
+        <input type='email' value={email} onChange={handleEmailChange} />
+      </label>
+      <label>
+        <p>Telefone</p>
+        <input type='text' value={telefone} onChange={handleTelefoneChange} />
+      </label>
+      <label>
+        <p>Data nascimento</p>
+        <input type='date' value={data} onChange={handleDataChange} />
+      </label>
+      <button onClick={salvar}>Enviar cadastro</button>
     </div>
-  );
-};
+  </div>
+
+)
+}
+
+
 
 export default Contact;

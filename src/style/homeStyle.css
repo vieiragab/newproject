@@ -59,7 +59,7 @@
 
 .content {
   display: flex;
-
+  
 }
 
 .slide {
@@ -112,29 +112,16 @@
     cursor: pointer;
 }
 
-.posts {
-  justify-content: center;
-  padding: 200px;
-  border-radius: 8px;
-
-}
-
-.posts h2 {
-  margin: 30px;
-  
-}
-
-.posts button {
-  margin: 30px;
-  
-}
 
 .post {
     border-radius: 8px;
     border: none;
     border: 2px solid transparent;
     border-color: #0766AD;
-    margin: 20px;
+    margin: 40px;
  
 }
 
+.ultimas-postagens {
+    padding: 100px;
+}

@@ -6,9 +6,9 @@ const Help = () => {
   return (
     <div id="ajuda">
       <div className='teste'>
-        <h2>laa</h2>
+        <h2>Teste</h2>
         <p>
-          lala
+          Teste
 
         </p>
 

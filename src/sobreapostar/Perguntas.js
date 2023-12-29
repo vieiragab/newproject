@@ -4,7 +4,7 @@ const Perguntas = () => {
 
     return(
         <div>
-            <h2>Perguntas frequentes</h2>
+            <h2 id="faq">Perguntas frequentes</h2>
         </div>
     )
 }

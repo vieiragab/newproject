@@ -3,7 +3,7 @@ const Vocabulario = () => {
 
     return (
         <div>
-            <h2>Vocabulário</h2>
+            <h2 id="vocabulario">Vocabulário</h2>
 <p><strong>Odd - </strong> refere-se às probabilidades oferecidas pelos operadores de apostas para determinado evento. As odds representam a relação entre o valor apostado e o potencial ganho. Odds mais altas indicam uma probabilidade menor do evento ocorrer, enquanto odds mais baixas indicam uma probabilidade maior.</p>
 
 <p><strong>Ilusão de Controle - </strong> ocorre quando os indivíduos acreditam erroneamente que têm influência ou controle sobre eventos que são, na verdade, inteiramente aleatórios. No contexto das apostas, os jogadores podem experimentar essa ilusão ao acreditar que suas decisões ou estratégias podem influenciar os resultados, mesmo em situações puramente baseadas na sorte.</p>

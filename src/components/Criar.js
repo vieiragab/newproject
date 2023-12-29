@@ -1,25 +1,24 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import '../style/criarStyle.css';
 import ReactHtmlParser from 'html-react-parser';
 
 
-
 const api = axios.create({
-    baseURL: "https://projectnew-3cf2a-default-rtdb.europe-west1.firebasedatabase.app/"
+    baseURL: "https://bet-responsavel-default-rtdb.europe-west1.firebasedatabase.app"
 });
 
 
 const ItemPost = (props) => {
+
     return (
         <div>
             <p>ID: {props.item.id}</p>
             <p>Título: {props.item.titulo}</p>
             <p>Subtítulo: {props.item.subtitulo}</p>
             <p>Conteúdo: {ReactHtmlParser(props.item.conteudo)}</p>
-            <p>Data: {props.item.data}</p>
             <p>Autor: {props.item.autor}</p>
         </div>
     );
@@ -67,15 +66,6 @@ const Criar = () => {
 
     }
 
-    const apagar = (obj) => {
-        api.delete("/posts/" + obj.id + ".json")
-            .then(() => {
-                lerPosts();
-            })
-            .catch(() => {
-                alert("Erro ao apagar o post")
-            })
-    }
 
     const limparCampos = () => {
         setTitulo("");
@@ -86,20 +76,54 @@ const Criar = () => {
         setId(null);
     }
 
+    const [recarregar, setRecarregar] = useState(false);
+
+    useEffect(() => {
+        if (recarregar) {
+            lerPosts();
+            setRecarregar(false); 
+        }
+    }, [recarregar]);
+
     const salvar = () => {
-        const obj = { titulo, subtitulo, conteudo, data, autor };
-        if (id) {
-            api.put("/posts/" + id + ".json", obj)
-                .then(() => {
-                    limparCampos();
-                })
-        } else {
-            api.post("/posts.json", obj)
-                .then(() => {
-                    limparCampos();
-                })
+        const confirmacao = window.confirm("Tem certeza que deseja criar/salvar a postagem?");
+        if (confirmacao) {
+            const obj = { titulo, subtitulo, conteudo, data, autor };
+            if (id) {
+                api.put("/posts/" + id + ".json", obj)
+                    .then(() => {
+                        limparCampos();
+                        setRecarregar(true); 
+                    })
+                    .catch(() => {
+                        alert("Erro ao salvar a postagem");
+                    });
+            } else {
+                api.post("/posts.json", obj)
+                    .then(() => {
+                        limparCampos();
+                        setRecarregar(true);
+                    })
+                    .catch(() => {
+                        alert("Erro ao criar a postagem");
+                    });
+            }
         }
     }
+
+    const apagar = (obj) => {
+        const confirmacao = window.confirm("Tem certeza que deseja apagar a postagem?");
+        if (confirmacao) {
+            api.delete("/posts/" + obj.id + ".json")
+                .then(() => {
+                    setRecarregar(true); 
+                })
+                .catch(() => {
+                    alert("Erro ao apagar a postagem");
+                });
+        }
+    }
+
 
     const handleTituloChange = (event) => {
         setTitulo(event.target.value);
@@ -127,8 +151,16 @@ const Criar = () => {
             ['bold', 'italic', 'underline', 'strike'],
             ['link', 'image', 'video'],
             [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-            ['clean']
+            ['clean'],
+            [{ 'align': [] }],
+            [{'color': []}], 
+            [{'background': []}],
+            ['blockquote', 'formula'],
+
+
         ]
+
+        
     };
 
     return (

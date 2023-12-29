@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.89b6ecd5.css",
-    "main.js": "/static/js/main.54df1d9a.js",
+    "main.css": "/static/css/main.23457951.css",
+    "main.js": "/static/js/main.4455dd2d.js",
     "static/media/casoum.png": "/static/media/casoum.c65040268986545485be.png",
     "static/media/caso3.png": "/static/media/caso3.eb55cafc75016c93c2d0.png",
     "static/media/caso2.png": "/static/media/caso2.63a81cec10728b1b25dc.png",
     "static/media/aboutus.png": "/static/media/aboutus.5fa8075d5ec50c0966e8.png",
     "static/media/jornal.png": "/static/media/jornal.b1131c86a49b3635b5a1.png",
     "index.html": "/index.html",
-    "main.89b6ecd5.css.map": "/static/css/main.89b6ecd5.css.map",
-    "main.54df1d9a.js.map": "/static/js/main.54df1d9a.js.map"
+    "main.23457951.css.map": "/static/css/main.23457951.css.map",
+    "main.4455dd2d.js.map": "/static/js/main.4455dd2d.js.map"
   },
   "entrypoints": [
-    "static/css/main.89b6ecd5.css",
-    "static/js/main.54df1d9a.js"
+    "static/css/main.23457951.css",
+    "static/js/main.4455dd2d.js"
   ]
 }

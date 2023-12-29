@@ -1,0 +1,58 @@
+.carrossel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carrossel div {
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+}
+
+.carrossel .inativo {
+  transform: translateX(100%);
+}
+
+.carrossel .ativo {
+  transform: translateX(0);
+}
+
+.carrossel-container {
+  position: relative;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100px; 
+}
+
+.button-container button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
+
+.post {
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post button {
+  border: none;
+  background-color: #0766AD;
+  padding: 1em;
+  cursor: pointer;
+  text-decoration: none;
+
+}

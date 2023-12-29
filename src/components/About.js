@@ -1,6 +1,5 @@
 import React from 'react';
 import aboutus from '../img/aboutus.png';
-import fundoabout from '../img/fundoabout.png';
 import '../style/aboutStyle.css';
 
 
@@ -24,7 +23,6 @@ function About() {
         </div>
 
       </div>
-      <img className="fundoab" src={fundoabout} alt="Sobre nos" />
 
     </div>
   );

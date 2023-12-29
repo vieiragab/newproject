@@ -1,12 +1,10 @@
 .menu {
-  position: fixed;
+  display: flex;
   top: 5px;
   left: 0;
-  width: 98.5%;
-  background-color: #0766AD;
+  background-color: #0766ad;
   padding: 10px;
   border-radius: 5px;
-  z-index: 1000;
   list-style: none;
 }
 
@@ -29,7 +27,7 @@
 }
 
 .menu li ul {
-  display: none; 
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -48,7 +46,6 @@
 }
 
 .menu ul {
-  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -70,8 +67,3 @@
   text-decoration: none;
 }
 
-
-
-.menudireita {
-  float: right;
-}

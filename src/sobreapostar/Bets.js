@@ -10,13 +10,13 @@ const Bets = () => {
   return (
     <div id="bets">
       <div className='textosd'>
-        <Oque/>
+        <Oque />
         <p>----------------------</p>
-        <Fatos/>
-        <p>----------------------</p>        
-        <Vocabulario/>
-        <p>----------------------</p>        
-        <Perguntas/>
+        <Fatos />
+        <p>----------------------</p>
+        <Vocabulario />
+        <p>----------------------</p>
+        <Perguntas />
       </div>
     </div>
   );

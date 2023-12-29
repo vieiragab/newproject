@@ -4,7 +4,7 @@ const Fatos = () => {
 
     return (
         <div>
-            <h2>Fatos e Mitos Sobre Apostas</h2>
+            <h2 id="fatos">Fatos e Mitos Sobre Apostas</h2>
             <h3>Riscos Envolvidos</h3>
             <p>
                 Cada aposta aponta para um resultado incerto, não existem garantias de que o resultado da aposta será ganhador. Quanto mais apostas fizer, as chances de ganhar continuam as mesmas, não é um fator que varia exponencialmente.
