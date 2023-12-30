@@ -1,9 +1,9 @@
 import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import ReactHtmlParser from 'html-react-parser';
+import React, { useEffect, useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import '../style/criarStyle.css';
-import ReactHtmlParser from 'html-react-parser';
 
 
 const api = axios.create({

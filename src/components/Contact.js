@@ -6,7 +6,7 @@ import '../style/criarStyle.css';
 
 
 const api = axios.create({
-  baseURL: "https://bet-responsavel-default-rtdb.europe-west1.firebasedatabase.app/"
+  baseURL: "https://bet-responsavel-default-rtdb.europe-west1.firebasedatabase.app"
 });
 
 

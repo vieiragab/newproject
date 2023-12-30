@@ -1,25 +1,24 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Vicio from "./apostandorespo/Vicio";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Criar from "./components/Criar";
+import Help from "./components/Help";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Post from "./components/Post";
-import Vicio from "./apostandorespo/Vicio";
-import Help from "./components/Help";
-import Bets from "./sobreapostar/Bets";
-import axios from "axios";
-import { useEffect } from "react";
 import Rodape from "./components/Route";
 import TodosPosts from "./components/TodosPosts";
+import Bets from "./sobreapostar/Bets";
 
 const App = () => {
   const [posts, setPosts] = useState([]);
 
   const api = axios.create({
     baseURL:
-      "https://betresponsavel-default-rtdb.europe-west1.firebasedatabase.app/",
+      "https://bet-responsavel-default-rtdb.europe-west1.firebasedatabase.app",
   });
 
   async function getPosts() {
